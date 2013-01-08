@@ -1,0 +1,16 @@
+--- 
+applications: 
+  .: 
+    url: ${name}.${target-base}
+    framework: 
+      name: sinatra
+      info: 
+        exec: ruby website.rb
+        mem: 128M
+        description: Sinatra Application
+    instances: 1
+    mem: 128M
+    name: cr
+    services: 
+      cassandra-test-service: 
+        type: cassandra
